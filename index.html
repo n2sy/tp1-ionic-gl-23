@@ -35,17 +35,17 @@
                       <ion-card-content>
                         <ion-item>
                           <ion-label position="floating">Initutulé de la dépense</ion-label>
-                          <ion-input></ion-input>
+                          <ion-input type="text" id="intitule"></ion-input>
                         </ion-item>
             
                         <ion-item>
                           <ion-label position="floating">Somme de la dépense</ion-label>
-                          <ion-input type="number"></ion-input>
+                          <ion-input id="somme" type="number"></ion-input>
                         </ion-item>
 
                         <div class="ion-text-end ion-margin-vertical">
-                            <ion-button color="danger" fill="outline"> Effacer <ion-icon slot="start" name="close-outline"></ion-icon></ion-button>
-                            <ion-button color="success" fill="outline"> <ion-icon slot="end" name="add-outline"></ion-icon> Ajouter</ion-button>
+                            <ion-button id="btn-effacer" color="danger" fill="outline"> Effacer <ion-icon slot="start" name="close-outline"></ion-icon></ion-button>
+                            <ion-button id="btn-ajouter" color="success" fill="outline"> <ion-icon slot="end" name="add-outline"></ion-icon> Ajouter</ion-button>
 
                         </div>
                       </ion-card-content>
@@ -54,18 +54,20 @@
             </ion-row>
              <ion-row>
                 <ion-col size-md="6" offset-md="3">
-                    
+                    <ion-list id="list-dep"></ion-list>
                 </ion-col>
             </ion-row>
              <ion-row>
                 <ion-col size-md="6" offset-md="3">
                     
-                    <strong>Total des dépenses : .....</strong>
+                    <strong id="total-dep">Total des dépenses : <span id="allDep"></span></strong>
                 </ion-col>
             </ion-row>
         </ion-grid>
         
       </ion-content>
     </ion-app>
+    <script src="app.js"></script>
+    
   </body>
 </html>
